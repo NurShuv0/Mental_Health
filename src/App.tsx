@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Lock } from 'lucide-react'
+import CustomCursor from './components/CustomCursor'
 
 // Exact Google Form URL specified in requirements
 const GOOGLE_FORM_URL =
@@ -17,6 +18,9 @@ export default function App(): React.JSX.Element {
 
   return (
     <div className="relative min-h-screen w-full bg-[#F5F2ED] text-[#242424] flex flex-col justify-center items-center px-4 sm:px-8 md:px-12 lg:px-16 py-10 md:py-14 overflow-x-hidden selection:bg-[#A99BCB]/30 selection:text-[#242424]">
+      {/* Custom Fluid Cursor Follower (Desktop only, respects prefers-reduced-motion) */}
+      <CustomCursor />
+
       {/* Subtle organic ambient gradient blooms */}
       <div
         aria-hidden="true"
